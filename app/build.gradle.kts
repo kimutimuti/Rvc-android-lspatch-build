@@ -30,7 +30,6 @@ android {
         }
     }
     
-    // Assure que l'APK inclut les fichiers de métadonnées pour LSPatch
     packaging {
         jniLibs {
             // S'assurer que les bibliothèques NDK (librvc_main_engine.so) sont dans l'APK
@@ -40,6 +39,15 @@ android {
             // Inclure xposed_init dans le dossier assets
             excludes.add("/META-INF/{AL2.0,LGPL2.1}")
         }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    
+    kotlinOptions {
+        jvmTarget = "17"
     }
 }
 
