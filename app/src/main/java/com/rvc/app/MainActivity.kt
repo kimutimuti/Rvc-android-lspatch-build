@@ -98,6 +98,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        Thread.setDefaultUncaughtExceptionHandler { _, e ->
+            try {
+                val logFile = java.io.File(android.os.Environment.getExternalStoragePublicDirectory(android.os.Environment.DIRECTORY_DOCUMENTS), "rvc_crash.log")
+                logFile.writeText("CRASH: ${e.message}\n${Log.getStackTraceString(e)}")
+            } catch (ignored: Exception) {}
+        }
         // Note: Le fichier layout/activity_main.xml doit être créé
         setContentView(R.layout.activity_main) 
         
