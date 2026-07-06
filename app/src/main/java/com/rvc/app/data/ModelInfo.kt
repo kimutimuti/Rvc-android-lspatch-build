@@ -1,3 +1,5 @@
+package com.rvc.app.data
+
 // --- app/src/main/java/com/rvc/app/data/ModelInfo.kt ---
 data class ModelInfo(
     val name: String,
