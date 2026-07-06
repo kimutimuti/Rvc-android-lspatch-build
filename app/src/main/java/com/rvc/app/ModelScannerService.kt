@@ -24,8 +24,8 @@ class ModelScannerService : Service() {
     // Liste thread-safe pour stocker les modèles valides
     private val validModels: CopyOnWriteArrayList<ModelInfo> = CopyOnWriteArrayList()
 
-    private val serviceHandler: Handler
-    private val serviceLooper: Looper
+    private lateinit var serviceHandler: Handler
+    private lateinit var serviceLooper: Looper
 
     // Binder pour communiquer avec l'activité principale
     private val binder = ModelScannerBinder()

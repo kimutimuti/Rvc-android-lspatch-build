@@ -18,6 +18,7 @@ import com.rvc.app.data.ModelInfo
 import com.rvc.app.service.RVCProcessingService
 import com.rvc.app.service.RVCProcessingService.RVCBinder
 import com.rvc.app.util.SharedPreferencesManager
+import com.rvc.module.R
 
 /**
  * Interface utilisateur principale pour le moteur RVC.
