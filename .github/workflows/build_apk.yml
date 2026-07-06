@@ -25,8 +25,11 @@ jobs:
         with:
           packages: 'ndk;26.1.10909125' # Doit correspondre à la version dans gradle.properties
 
+      - name: Generate Gradle Wrapper
+        run: gradle wrapper --gradle-version 8.7
+
       - name: Build Debug APK
-        run: gradle assembleDebug
+        run: ./gradlew assembleDebug
 
       - name: Sign APK (Optional, but recommended for LSPatch/Xposed)
         # LSPosed préfère les APK signés. Nécessite des secrets de clé.
