@@ -28,9 +28,8 @@
         <meta-data
             android:name="xposedinit"
             android:value="com.rvc.patch.HookEntry" />
-
         <activity
-            android:name=".MainActivity"
+            android:name="com.rvc.app.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:launchMode="singleTop">
@@ -41,12 +40,12 @@
         </activity>
 
         <service
-            android:name=".RVCProcessingService"
+            android:name="com.rvc.app.service.RVCProcessingService"
             android:exported="false"
             android:foregroundServiceType="microphone" />
 
         <service
-            android:name=".ExternalCommandApiService"
+            android:name="com.rvc.app.ExternalCommandApiService"
             android:exported="true"
             android:enabled="true">
             <intent-filter>
