@@ -40,6 +40,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.rvc.app.ModelSelectionActivity" />
+
         <service
             android:name="com.rvc.app.service.RVCProcessingService"
             android:exported="false"
